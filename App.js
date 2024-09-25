@@ -1,11 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.area}>username</TextInput>
-      <TextInput style={styles.area}>password</TextInput>
+      <image source="./university-of-ghana/assets"></image>
+      <TextInput 
+        style={styles.area} 
+        placeholder="Username" 
+        placeholderTextColor="#888" 
+      />
+      <TextInput 
+        style={styles.area} 
+        placeholder="Password" 
+        secureTextEntry={true} 
+        placeholderTextColor="#888"
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -18,11 +28,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  area:{
-    borderColor:"black",
-    width:50 , 
-    borderRadius:10,
-    height:35,
-  }
-
+  area: {
+    borderColor: "black",
+    borderWidth: 1, 
+    width: 120,
+    borderRadius: 10,
+    height: 40,
+    paddingHorizontal: 10,
+    marginVertical: 10, 
+  },
 });
